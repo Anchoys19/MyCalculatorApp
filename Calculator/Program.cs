@@ -5,8 +5,6 @@ namespace MyCalculatorApp
 {
     internal class Program
     {
-        private static double result;
-
         static void Main(string[] args)
         {
             double num1, num2;
@@ -18,7 +16,7 @@ namespace MyCalculatorApp
             operation = Convert.ToChar(Console.ReadLine());
             Console.Write("Enter the second number: ");
             num2 = Convert.ToDouble(Console.ReadLine());
-            double resolt = 0;
+            double result = 0;
             Console.Write("Enter tne result: ");
             switch (operation)
             {
@@ -40,7 +38,7 @@ namespace MyCalculatorApp
             }
             Console.WriteLine("Результат: " + result);
 
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
