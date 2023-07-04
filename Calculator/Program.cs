@@ -1,46 +1,55 @@
 ﻿using System;
+using System;
+using System;
 using System.Runtime.CompilerServices;
 
-namespace MyCalculatorApp 
+namespace MyCalculatorApp
 {
     internal class Program
     {
-        private static double result;
-
         static void Main(string[] args)
         {
-            double num1, num2;
-            char operation;
-            Console.WriteLine("Hello person");
-            Console.Write("Enter tne first number: ");
-            num1 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter a sign(+,-,*,/): ");
-            operation = Convert.ToChar(Console.ReadLine());
-            Console.Write("Enter the second number: ");
-            num2 = Convert.ToDouble(Console.ReadLine());
-            double resolt = 0;
-            Console.Write("Enter tne result: ");
-            switch (operation)
+            while (true)
             {
-                case '+':
-                    result = num1 + num2;
+                try
+                {
+                    Console.WriteLine("Hello person");
+                    Console.Write("Enter tne first number: ");
+                    double num1 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("Enter a sign(+,-,*,/): ");
+                    char operation = Convert.ToChar(Console.ReadLine());
+                    Console.Write("Enter the second number: ");
+                    double num2 = Convert.ToDouble(Console.ReadLine());
+                    double result = 0;
+                    Console.Write("Result is: ");
+                    switch (operation)
+                    {
+                        case '+':
+                            result = num1 + num2;
+                            break;
+                        case '-':
+                            result = num1 - num2;
+                            break;
+                        case '*':
+                            result = num1 * num2;
+                            break;
+                        case '/':
+                            result = num1 / num2;
+                            break;
+                        default:
+                            Console.WriteLine("Wrong operation");
+                            break;
+                    }
+                    Console.WriteLine(result);
+                    Console.WriteLine("Press any key to exit");
+                    Console.ReadKey();
                     break;
-                case '-':
-                    result = num1 - num2;
-                    break;
-                case '*':
-                    result = num1 * num2;
-                    break;
-                case '/':
-                    result = num1 / num2;
-                    break;
-                default:
-                    Console.WriteLine("Wrong operation");
-                    break;
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Invalid number format. Please enter a valid number.");
+                }
             }
-            Console.WriteLine("Результат: " + result);
-
-            Console.ReadLine();
         }
     }
 }
