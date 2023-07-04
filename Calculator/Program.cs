@@ -14,33 +14,46 @@ namespace MyCalculatorApp
                 try
                 {
                     Console.WriteLine("Hello person");
-                    Console.Write("Enter tne first number: ");
+                    Console.Write("Enter the first number: ");
                     double num1 = Convert.ToDouble(Console.ReadLine());
-                    Console.Write("Enter a sign(+,-,*,/): ");
+                    Console.Write("Enter a sign (+, -, *, /, ^): ");
                     char operation = Convert.ToChar(Console.ReadLine());
-                    Console.Write("Enter the second number: ");
-                    double num2 = Convert.ToDouble(Console.ReadLine());
+
                     double result = 0;
-                    Console.Write("Result is: ");
+                    double num2;
+
                     switch (operation)
                     {
                         case '+':
+                            Console.Write("Enter the second number: ");
+                            num2 = Convert.ToDouble(Console.ReadLine());
                             result = num1 + num2;
                             break;
                         case '-':
+                            Console.Write("Enter the second number: ");
+                            num2 = Convert.ToDouble(Console.ReadLine());
                             result = num1 - num2;
                             break;
                         case '*':
+                            Console.Write("Enter the second number: ");
+                            num2 = Convert.ToDouble(Console.ReadLine());
                             result = num1 * num2;
                             break;
                         case '/':
+                            Console.Write("Enter the second number: ");
+                            num2 = Convert.ToDouble(Console.ReadLine());
                             result = num1 / num2;
+                            break;
+                        case '^':
+                            Console.Write("Enter the exponent: ");
+                            num2 = Convert.ToDouble(Console.ReadLine());
+                            result = Math.Pow(num1, num2);
                             break;
                         default:
                             Console.WriteLine("Wrong operation");
                             break;
                     }
-                    Console.WriteLine(result);
+                    Console.WriteLine("Result is: " + result);
                     Console.WriteLine("Press any key to exit");
                     Console.ReadKey();
                     break;
