@@ -25,29 +25,84 @@ namespace MyCalculatorApp
                     switch (operation)
                     {
                         case '+':
-                            Console.Write("Enter the second number: ");
-                            num2 = Convert.ToDouble(Console.ReadLine());
-                            result = num1 + num2;
+                            while (true)
+                            {
+                                try
+                                {
+                                    Console.Write("Enter the second number: ");
+                                    num2 = Convert.ToDouble(Console.ReadLine());
+                                    result = num1 + num2;
+                                    break;
+                                }
+                                catch (FormatException)
+                                {
+                                    Console.WriteLine("Invalid number format. Please enter a valid number.");
+                                }
+                            }
                             break;
                         case '-':
-                            Console.Write("Enter the second number: ");
-                            num2 = Convert.ToDouble(Console.ReadLine());
-                            result = num1 - num2;
+                            while (true)
+                            {
+                                try
+                                {
+                                    Console.Write("Enter the second number: ");
+                                    num2 = Convert.ToDouble(Console.ReadLine());
+                                    result = num1 - num2;
+                                    break;
+                                }
+                                catch (FormatException)
+                                {
+                                    Console.WriteLine("Invalid number format. Please enter a valid number.");
+                                }
+                            }
                             break;
                         case '*':
-                            Console.Write("Enter the second number: ");
-                            num2 = Convert.ToDouble(Console.ReadLine());
-                            result = num1 * num2;
+                            while (true)
+                            {
+                                try
+                                {
+                                    Console.Write("Enter the second number: ");
+                                    num2 = Convert.ToDouble(Console.ReadLine());
+                                    result = num1 * num2;
+                                    break;
+                                }
+                                catch (FormatException)
+                                {
+                                    Console.WriteLine("Invalid number format. Please enter a valid number.");
+                                }
+                            }
                             break;
                         case '/':
-                            Console.Write("Enter the second number: ");
-                            num2 = Convert.ToDouble(Console.ReadLine());
-                            result = num1 / num2;
+                            while (true)
+                            {
+                                try
+                                {
+                                    Console.Write("Enter the second number: ");
+                                    num2 = Convert.ToDouble(Console.ReadLine());
+                                    result = num1 / num2;
+                                    break;
+                                }
+                                catch (FormatException)
+                                {
+                                    Console.WriteLine("Invalid number format. Please enter a valid number.");
+                                }
+                            }
                             break;
                         case '^':
-                            Console.Write("Enter the exponent: ");
-                            num2 = Convert.ToDouble(Console.ReadLine());
-                            result = Math.Pow(num1, num2);
+                            while (true)
+                            {
+                                try
+                                {
+                                    Console.Write("Enter the exponent: ");
+                                    num2 = Convert.ToDouble(Console.ReadLine());
+                                    result = Math.Pow(num1, num2);
+                                    break;
+                                }
+                                catch (FormatException)
+                                {
+                                    Console.WriteLine("Invalid number format. Please enter a valid number.");
+                                }
+                            }
                             break;
                         default:
                             Console.WriteLine("Wrong operation");
